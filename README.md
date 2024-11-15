@@ -8,6 +8,11 @@ This is a simple project setup using React with Vite. Vite provides a fast build
 - [Node.js](https://nodejs.org/en/) (v14 or higher)
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
+## Screenshots
+![image](./screenshots/web.jpg)
+![image](./screenshots/mobile.jpg)
+
+
 ## Getting Started
 
 ### 1. Clone the repository
