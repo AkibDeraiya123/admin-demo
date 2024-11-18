@@ -15,7 +15,7 @@ const statsData = [
     rate: "0.43%",
     levelUp: true,
     icon: <GrMicrofocus className='text-5xl fill-primary dark:fill-white' />,
-    link: '/user/admin/list'
+    link: '/admin'
   },
   {
     title: "Content Approval",
@@ -35,20 +35,20 @@ const statsData = [
     link: '/cms'
   },
   {
-    title: "feedback",
+    title: "Feedback",
     total: "112",
     rate: "0.95%",
     levelUp: true,
     icon: <SiHomeassistantcommunitystore className='text-3xl fill-primary dark:fill-white' />,
-    link: '/feedback",'
+    link: '/feedback'
   },
   {
-    title: "users",
+    title: "Users",
     total: "212",
     rate: "0.95%",
     levelUp: true,
     icon: <RiHotspotFill className='text-3xl fill-primary dark:fill-white' />,
-    link: '/dashboard'
+    link: '/users'
   }
 ];
 
