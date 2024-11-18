@@ -9,8 +9,8 @@ This is a simple project setup using React with Vite. Vite provides a fast build
 - [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
 ## Screenshots
-![image](./screenshots/web.jpg)
-![image](./screenshots/mobile.jpg)
+![image](./screenshots/web.png)
+![image](./screenshots/mobile.png)
 
 
 ## Getting Started
