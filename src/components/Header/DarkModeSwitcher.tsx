@@ -4,7 +4,7 @@ const DarkModeSwitcher = () => {
   const [colorMode, setColorMode] = useColorMode();
 
   return (
-    <div className='flex gap-10 items-center justify-between'>
+    <div className='flex gap-4 ml-5 items-center justify-between'>
       <span
         className={`flex h-5 w-5 items-center justify-center rounded-full bg-white shadow-switcher duration-75 ease-linear`}
       >

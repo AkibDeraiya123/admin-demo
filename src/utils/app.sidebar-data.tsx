@@ -1,96 +1,101 @@
-import { FaCalendar, FaMapMarked } from 'react-icons/fa';
-import { LuPieChart } from 'react-icons/lu';
+import { BsArrowUpRightCircle, BsFillBookFill } from 'react-icons/bs';
+import { CiImageOn } from 'react-icons/ci';
+import { FaCalendar, FaMapMarked, FaUserPlus, FaUserSecret } from 'react-icons/fa';
+import { GrContactInfo } from 'react-icons/gr';
+import { LuServerCog, LuUserCheck2, LuUserSquare } from 'react-icons/lu';
+import { MdSpaceDashboard } from 'react-icons/md';
+import { RiChatSmileLine, RiFileGifLine } from 'react-icons/ri';
 
 export const links = [
   {
     title: 'Dashboard',
     path: '/dashboard',
     pathnameInclude: 'dashboard',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <MdSpaceDashboard className='text-2xl' />,
   },
   {
     title: 'Our Expert',
     path: '/our-expert',
     pathnameInclude: 'our-expert',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <LuUserSquare className='text-2xl' />,
   },
   {
     title: 'Map',
     path: '/map',
     pathnameInclude: 'map',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <CiImageOn className='text-2xl' />,
   },
   {
     title: 'Survey',
     path: '/survey',
     pathnameInclude: 'survey',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <GrContactInfo className='text-2xl' />,
   },
   {
     title: 'Self Assessment',
     path: '/self-assessment',
     pathnameInclude: 'self-assessment',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <RiChatSmileLine className='text-2xl' />,
   },
   {
     title: 'Admins',
     path: '/admins',
     pathnameInclude: 'admins',
-    icon: <LuPieChart className='text-xl' />,
+    icon: <LuServerCog className='text-2xl' />,
   },
   {
     title: 'B2B',
     path: '/events',
     pathnameInclude: 'events',
-    icon: <FaCalendar className='text-xl' />,
+    icon: <FaCalendar className='text-2xl' />,
   },
   {
     title: 'Patterns',
     path: '/place',
     pathnameInclude: 'place',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <LuUserCheck2 className='text-2xl' />,
   },
   {
     title: 'Users',
     path: '/neighborhood',
     pathnameInclude: 'neighborhood',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <FaUserSecret className='text-2xl' />,
   },
   {
     title: 'Content Approval',
     path: '/interests',
     pathnameInclude: 'interests',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <FaUserPlus className='text-2xl' />,
   },
   {
     title: 'Management',
     path: '/interests',
     pathnameInclude: 'interests',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <FaMapMarked className='text-2xl' />,
   },
   {
     title: 'Push Notification',
     path: '/push-notifications',
     pathnameInclude: 'push-notifications',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <BsArrowUpRightCircle className='text-2xl' />,
   },
   {
     title: 'CMS',
     path: '/cms',
     pathnameInclude: 'cms',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <BsFillBookFill className='text-2xl' />,
   },
   {
     title: 'Config',
     path: '/config',
     pathnameInclude: 'config',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <RiFileGifLine className='text-2xl' />,
   },
   {
     title: 'App Feedback',
     path: '/app-feedback',
     pathnameInclude: 'app-feedback',
-    icon: <FaMapMarked className='text-xl' />,
+    icon: <FaMapMarked className='text-2xl' />,
   }
   
  

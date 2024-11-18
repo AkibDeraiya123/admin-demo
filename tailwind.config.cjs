@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     fontFamily: {
       satoshi: ['Satoshi', 'sans-serif'],
+      'p22-mackinac': ['"P22 Mackinac"', 'serif'], 
     },
     screens: {
       '2xsm': '375px',

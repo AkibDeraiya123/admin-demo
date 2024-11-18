@@ -11,8 +11,8 @@ const SelfAssessment = () => {
       <div className="container">
         <div className="flex justify-between items-center">
           <div className="flex gap-4 items-center">
-            <button>Edit</button>
-            <button className='font-extrabold'>Share</button>
+            <button className='font-extrabold'>Edit</button>
+            <button >Share</button>
           </div>
           <div className="flex gap-4 items-center">
             <label className="inline-flex items-center justify-center cursor-pointer">
@@ -45,7 +45,7 @@ const SelfAssessment = () => {
                   type="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  className="w-full border bg-gray-300 max-w-md rounded-md p-2"
+                  className="w-full border border-[#E7E8EA] bg-[#F4F4F4] max-w-md rounded-md p-2"
                 />
               </div>
               <div>
@@ -54,7 +54,7 @@ const SelfAssessment = () => {
                   type="time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
-                  className="w-full border bg-gray-300 max-w-md rounded-md p-2"
+                  className="w-full border border-[#E7E8EA] bg-[#F4F4F4] max-w-md rounded-md p-2"
                 />
               </div>
             </div>
@@ -68,21 +68,21 @@ const SelfAssessment = () => {
               <input
                 type="text"
                 placeholder="You have completed this assessment"
-                className="w-full bg-slate-300 max-w-xl rounded-md p-2"
+                className="w-full border-[#E7E8EA] bg-[#F4F4F4] max-w-xl rounded-md p-2"
               />
             </div>
             <div>
               <label className="block text-sm font-medium mb-1">Body Text:</label>
               <textarea
                 placeholder="Thank you for taking the time to answer this assessment."
-                className="w-full bg-slate-300 max-w-xl rounded-md p-2"
+                className="w-full border-[#E7E8EA] bg-[#F4F4F4] max-w-xl rounded-md p-2"
               />
             </div>
           </div>
 
           {/* Action Buttons */}
           <div className="mt-6 flex justify-end gap-4">
-            <button className="px-4 py-2 bg-gray-300 text-gray-700 rounded-md">Preview</button>
+            <button className="px-4 py-2border-[#E7E8EA] bg-[#F4F4F4] text-gray-700 rounded-md">Preview</button>
             <button className="px-4 py-2 bg-blue-600 text-white rounded-md">Send Assessment</button>
           </div>
         </div>

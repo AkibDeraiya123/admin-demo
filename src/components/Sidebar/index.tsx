@@ -4,10 +4,10 @@ import SidebarLink from './SidebarLink';
 import { links } from '@/utils/app.sidebar-data';
 import { GrClose } from 'react-icons/gr';
 import DarkModeSwitcher from '../Header/DarkModeSwitcher';
-import { CiLogout } from "react-icons/ci";
+import { AiOutlineLogout } from "react-icons/ai";
 import { useCurrentUser } from '@/context/userContext';
 import useColorMode from '@/hooks/useColorMode';
-import PhoneMockUp from '@/static/images/logo/logo.png';
+import PhoneMockUp from '@/static/images/logo/logo-icon.svg';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -64,16 +64,14 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
   return (
     <aside
       ref={sidebar}
-      className={`absolute rounded shadow-6 left-0 top-0 z-9999 flex max-h-screen w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+      className={`relative rounded shadow-6 left-0 lg:top-0 top-24 z-99 flex max-h-screen w-19 lg:w-72.5 flex-col overflow-y-hidden bg-white duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0`}
     >
       {/* <!-- SIDEBAR HEADER --> */}
-      <div className="flex items-center justify-between gap-2 px-6 py-5 ">
+      <div className="hidden lg:flex items-center justify-between gap-2 px-6 ">
         <NavLink to="/">
-          <h1 className='text-4xl uppercase italic'>Shoorah</h1>
-          {/* <span className="inline-block h-10 w-14">
-                <img src={PhoneMockUp} alt="phone-mockup" />
-              </span> */}
+          <span className="inline-block h-19 w-39">
+            <img src={PhoneMockUp} alt="phone-mockup" className='h-full w-full' />
+          </span>
         </NavLink>
 
         <button
@@ -88,11 +86,11 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       </div>
       {/* <!-- SIDEBAR HEADER --> */}
 
-      <div className="no-scrollbar max-h-screen flex flex-col overflow-y-auto duration-300 ease-linear">
+      <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">
         {/* <!-- Sidebar Menu --> */}
-        <nav className="mt-1 py-4 px-4 lg:px-6">
+        <nav className="mt-1 lg:py-4 lg:px-6">
           <div>
-            <ul className="mb-6 flex flex-col gap-2">
+            <ul className="mb-6 flex flex-col">
               {links.map((link, index) => (
                 <SidebarLink key={index} link={link} />
               ))}
@@ -101,16 +99,16 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
         </nav>
         {/* <!-- Sidebar Menu --> */}
       </div>
-      <div className="absolute bottom-0 left-0 w-full border-t bg-white">
-        <div className="pt-2">
-          <div className="py-2 flex w-full pl-6">
+      <div className="hidden lg:block w-full bg-white px-6">
+        <div className="mt-1 lg:py-4 border-t ">
+          <div className="py-2 flex w-full">
             <DarkModeSwitcher />
           </div>
-          <div className="">
+          <div className="ml-4 mt-4">
             <button
-              className="flex gap-9 py-2 font-medium duration-300 ease-in-out hover:text-blue-200 pl-6 "
+              className="flex gap-4 py-2 font-medium duration-300 ease-in-out hover:text-blue-200"
               onClick={() => logOutUser()}>
-              <CiLogout className='text-2xl' />
+              <AiOutlineLogout className='text-2xl' />
               Log Out
             </button>
           </div>

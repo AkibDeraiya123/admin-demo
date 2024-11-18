@@ -67,10 +67,14 @@ const SidebarLink: React.FC<SidebarLinkProps> = ({ link: { title, path, icon, su
       ) : (
         <NavLink
           to={path || '/'}
-          className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium duration-300 ease-in-out hover:border-l-4 ${isCurrentPath && 'text-primary border-l-4'}`}
+          className={`group relative flex items-center gap-2.5 rounded-sm px-5 py-4 font-medium duration-300 ease-in-out hover:border-l-4 ${isCurrentPath ? 'text-primary border-l-6': 'lg:border-none border border-gray'}`}
         >
+          <div className="text-2xl">
           {icon}
+          </div>
+          <span className='hidden lg:block'>
           {title}
+          </span>
         </NavLink>
       )}
     </li>

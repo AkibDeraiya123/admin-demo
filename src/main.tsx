@@ -6,6 +6,7 @@ import { pdfjs } from 'react-pdf';
 // import styles
 import './static/css/style.css';
 import './static/css/satoshi.css';
+import './static/css/p22mackinac.css'
 import 'flatpickr/dist/flatpickr.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import "ag-grid-community/styles/ag-grid.css";

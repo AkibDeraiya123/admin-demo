@@ -21,7 +21,7 @@ const DefaultLayout: React.FC<{ children: ReactNode, heading: string }> = ({ chi
 
           {/* <!-- ===== Main Content Start ===== --> */}
           <main>
-            <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+            <div className="mx-auto max-w-screen-2xl mt-29 lg:mt-0 p-4 md:p-6 2xl:p-10">
               {children}
             </div>
           </main>

@@ -7,6 +7,7 @@ import NeighborhoodList from "@/pages/Neighborhood";
 import NotFound from "@/pages/NotFound";
 import PlaceList from "@/pages/place";
 import SelfAssessment from "@/pages/self-assessment";
+import SurveyPage from "@/pages/survey";
 import UserList from "@/pages/Users";
 
 
@@ -21,7 +22,8 @@ export const publicRoutes = [
   { path: "/place", element: <PlaceList /> },
   { path: "/neighborhood", element: <NeighborhoodList /> },
   { path: "/interests", element: <InterestList /> },
-  { path: '/self-assessment', element: <SelfAssessment/>}
+  { path: '/self-assessment', element: <SelfAssessment/>},
+  { path: '/survey', element: <SurveyPage />}
 
 ];
 

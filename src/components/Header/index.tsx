@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import DropdownNotification from './DropdownNotification';
 import DropdownUser from './DropdownUser';
-import LogoIcon from '@/static/images/logo/logo-icon.svg';
+import { IoSettingsOutline } from "react-icons/io5";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
@@ -9,60 +9,18 @@ const Header = (props: {
   heading: string
 }) => {
   return (
-    <header className="sticky top-0 z-999 bg-transparent bg-slate-100 flex w-full drop-shadow-1 ">
-      <div className="flex flex-grow items-center justify-between px-4 py-4 md:px-6 2xl:px-11">
-        <div className="flex items-center gap-2 sm:gap-4 lg:hidden">
-          {/* <!-- Hamburger Toggle BTN --> */}
-          <button
-            aria-controls="sidebar"
-            onClick={(e) => {
-              e.stopPropagation();
-              props.setSidebarOpen(!props.sidebarOpen);
-            }}
-            className="z-99999 block rounded-sm border border-stroke bg-white p-1.5 shadow-sm dark:border-strokedark dark:bg-boxdark lg:hidden"
-          >
-            <span className="relative block h-5.5 w-5.5 cursor-pointer">
-              <span className="du-block absolute right-0 h-full w-full">
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-[0] duration-200 ease-in-out dark:bg-white ${!props.sidebarOpen && '!w-full delay-300'
-                    }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-150 duration-200 ease-in-out dark:bg-white ${!props.sidebarOpen && 'delay-400 !w-full'
-                    }`}
-                ></span>
-                <span
-                  className={`relative left-0 top-0 my-1 block h-0.5 w-0 rounded-sm bg-black delay-200 duration-200 ease-in-out dark:bg-white ${!props.sidebarOpen && '!w-full delay-500'
-                    }`}
-                ></span>
-              </span>
-              <span className="absolute right-0 h-full w-full rotate-45">
-                <span
-                  className={`absolute left-2.5 top-0 block h-full w-0.5 rounded-sm bg-black delay-300 duration-200 ease-in-out dark:bg-white ${!props.sidebarOpen && '!h-0 !delay-[0]'
-                    }`}
-                ></span>
-                <span
-                  className={`delay-400 absolute left-0 top-2.5 block h-0.5 w-full rounded-sm bg-black duration-200 ease-in-out dark:bg-white ${!props.sidebarOpen && '!h-0 !delay-200'
-                    }`}
-                ></span>
-              </span>
-            </span>
-          </button>
-          {/* <!-- Hamburger Toggle BTN --> */}
+    <header className="lg:sticky fixed top-0 left-0 z-999 lg:bg-slate-100 bg-white shadow-4 flex w-full drop-shadow-1 ">
+      <div className="flex flex-grow items-center justify-between px-4 py-2 md:px-6 2xl:px-11">
 
-          <Link className="block flex-shrink-0 lg:hidden" to="/">
-            <img src={LogoIcon} alt="Logo" />
-          </Link>
-        </div>
 
         <div className="hidden sm:block">
-          <h2 className="text-xl font-semibold text-black dark:text-white first-letter:uppercase">
-            {props.heading ? props.heading : ''}
+          <h2 className="text-[24px] font-[500] flex items-center gap-1 text-black dark:text-white first-letter:uppercase">
+            {props.heading ? props.heading : ''} <IoMdInformationCircleOutline className='font-light p-1' />
           </h2>
         </div>
 
-        <div className="flex items-center gap-3 2xsm:gap-7">
-          <ul className="flex items-center gap-2 2xsm:gap-4">
+        <div className="flex items-center lg:justify-normal justify-between w-full lg:w-auto gap-3 2xsm:gap-7">
+          <ul className="flex items-center lg:gap-4">
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Dark Mode Toggler --> */}
@@ -70,12 +28,14 @@ const Header = (props: {
             {/* <!-- Notification Menu Area --> */}
             <DropdownNotification />
             {/* <!-- Notification Menu Area --> */}
-
+            <DropdownUser />
           </ul>
 
           {/* <!-- User Area --> */}
-          <DropdownUser />
           {/* <!-- User Area --> */}
+          <div className="border rounded-full p-[6px] lg:hidden">
+            <IoSettingsOutline className='text-2xl' />
+          </div>
         </div>
       </div>
     </header>
